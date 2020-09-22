@@ -1,0 +1,17 @@
+{
+    "name": "funcionarios",
+    "version": "1.0.0",
+    "description": "",
+    "main": "funcionarios.js",
+    "scripts": {
+        "start": "nodemon",
+        "dev": "nodemon",
+        "test": "Error"
+    },
+    "keywords": [],
+    "author": {},
+    "license": "ISC",
+    "dependencies": {
+        "axios": "0.17.1"
+    }
+}
