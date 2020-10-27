@@ -1,0 +1,5 @@
+#textoPrincipal { /* "#" é utilizado para referenciar ID do html*/
+    background-color: darkorange;
+    color: white;
+    padding: 10px;
+}
