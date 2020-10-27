@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios HTML</title>
+    <style>
+        #conteudo {
+            padding: 30px 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercicios HTML</h1>
+    </header>
+    <nav>
+        <a href="exercicios/teste.html">00 - Teste</a> |
+        <a href="exercicios/texto1.html">Temps</a>
+    </nav>
+    <section id="conteudo"></section>
+    <br> <footer>Curso de Web Moderno</footer>
+    <script>
+        document.querySelectorAll('a').forEach(link => {
+            link.onclick = function(e) {
+                e.preventDefault() //Previne a ação original do link
+
+                const conteudo = document.getElementById('conteudo')//Seleciona a section de id conteudo
+
+                fetch(link.href) //Requisição AJAX para receber o link da página (É uma Promise)
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html) //Section de id conteudo recebe o conteudo do link clicado.
+            }})
+    </script>
+</body>
+</html>
