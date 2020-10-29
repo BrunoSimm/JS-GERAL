@@ -1,0 +1,44 @@
+<h1>Projeto</h1>
+<ul class="tree">
+    <li>
+       <span folder>Backend</span> 
+        <ul>
+            <li>
+                <span folder>App</a></span> 
+                <ul>
+                    <li>produto.js</li>
+                    <li>ussuario.js</li>
+                    <li>venda.js</li>
+                </ul>
+            </li>
+
+        </ul>
+    </li>
+    <li>
+        <span folder>FrontEnd</span>  
+        <ul>
+            <li><span folder>public</span>
+                <ul>
+                    <li>app.css</li>
+                    <li>app.js</li>
+                    <li>index.html</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+    document.querySelectorAll('[folder]').forEach(folder => { //Seleciona todos os <span folder>
+            folder.onclick = function(e) {
+                e.preventDefault() 
+                
+                const ul = folder.nextElementSibling; //Pega o próximo elemento HTML
+                if (ul.style.display == "none"){
+                    ul.style.display = "block"
+                } else {
+                    ul.style.display = "none"
+                }
+                
+            }});
+</script>
