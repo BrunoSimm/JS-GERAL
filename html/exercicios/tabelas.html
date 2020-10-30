@@ -1,0 +1,59 @@
+<table>
+    <caption>Produtos</caption> <!--Nome da tabela-->
+    <thead> <!-- Cabeçalho da tabela, onde ficam as colunas-->
+        <tr> <!-- Define uma linha-->
+            <th>Produto</th> <!-- Cada coluna da linha de cabeçalho-->
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>iPAD</td>
+            <td>3200</td>
+            <td>2</td>
+            <td>6400</td>
+        </tr>
+        <tr>
+            <td>Note</td>
+            <td>4000</td>
+            <td>1</td>
+            <td>4000</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">Total</td> <!--colspan: quantidade de colunas que irá ocupar; 
+            rowspan: quantidade de linhas que irá ocupar-->
+            <td>10400</td>
+        </tr>
+    </tfoot>
+</table>
+
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    th,td{
+        padding: 10px; /*Espaçamento*/
+    }
+
+    thead tr { /*No thead, nas tags tr...*/
+        border-bottom: solid 3px #444;
+    }
+
+    tbody tr:hover{
+        background-color: #dedede;
+    }
+
+    tfoot {
+        background-color: #444;
+        color: #fff;
+        font-weight: bold;
+    }
+    caption {
+       font-weight: bold;
+       font-size: larger;
+    }
+</style>
